@@ -557,7 +557,7 @@ jobs:
                 "ref": testsBranch.name,
                 "inputs": {
                   "liquibaseCommit": helper.getCurrentSha(),
-                  "runDescription": "Triggered by https://github.com/liquibase/liquibase/actions/runs/"+context.runId,
+                  "runDescription": "Triggered by https://github.com/mm65de/liquibase/actions/runs/"+context.runId,
                   "liquibaseBranch": helper.getCurrentBranch(),
                   "runDetails": JSON.stringify({
                     "liquibaseBranch": helper.getCurrentBranch(),
@@ -578,9 +578,9 @@ jobs:
                 "workflow_id": "main.yml",
                 "ref": testHarnessBranch.name,
                 "inputs": {
-                  "runDescription": "Triggered by https://github.com/liquibase/liquibase/actions/runs/"+context.runId,
+                  "runDescription": "Triggered by https://github.com/mm65de/liquibase/actions/runs/"+context.runId,
                   "liquibaseBranch": helper.getCurrentBranchLabel(),
-                  "liquibaseRepo": "liquibase/liquibase",
+                  "liquibaseRepo": "mm65de/liquibase",
                   "runDetails": JSON.stringify({
                     "notices": notices
                   })
