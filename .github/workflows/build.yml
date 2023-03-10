@@ -75,6 +75,7 @@ jobs:
 
       - name: Find corresponding branches
         id: find-branches
+        if: github.repository == 'liquibase/liquibase'
         uses: actions/github-script@v6
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
