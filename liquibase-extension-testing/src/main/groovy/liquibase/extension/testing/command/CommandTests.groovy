@@ -1209,6 +1209,11 @@ Long Description: ${commandDefinition.getLongDescription() ?: "NOT SET"}
         Database altDatabase
     }
 
+    public static String createRandomFilePath(String suffix) {
+        String rand = "target/test-classes/" + StringUtil.randomIdentifer(10) + "." + suffix
+        rand
+    }
+
     interface OutputCheck {
         def check(String actual) throws AssertionError
         /**
@@ -1361,7 +1366,9 @@ Long Description: ${commandDefinition.getLongDescription() ?: "NOT SET"}
         @Override
         void sendErrorMessage(String message, Throwable exception) {
             errorOutput.println(message)
-            exception.printStackTrace(errorOutput)
+            if (exception != null) {
+                exception.printStackTrace(errorOutput)
+            }
         }
 
         @Override
